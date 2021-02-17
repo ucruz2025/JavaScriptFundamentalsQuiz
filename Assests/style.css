@@ -1,0 +1,17 @@
+body{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.container{
+    text-align: center;
+    margin: auto;
+    padding: 25px 100px;
+}
+
+button{
+    background-color:salmon;
+    color: cornsilk;
+    cursor: pointer;
+    padding: 2px 5px;
+
+}
