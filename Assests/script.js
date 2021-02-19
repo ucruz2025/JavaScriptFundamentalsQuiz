@@ -1,8 +1,16 @@
-var startQuiz = document.querySelector("#startQuiz")//Need to add button to HTML
+var count = 0;//make sure to create function that changes this
+
+var startQuiz = document.querySelector("#start-Quiz")//Need to add button to HTML
+var viewHiSc = document.querySelector("view-HiSc")
 
 //Need to add eventListener for start button
 startQuiz.addEventListener("click", function(){
     //Need to include function to start quiz
+});
+
+//eventListener to view high scores
+viewHiSc.addEventListener("click", function(){
+
 });
 
 //Look how to use timeInterval to set time countdown

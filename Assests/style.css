@@ -1,15 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --btnColor: salmon;
+    --bckColor: rgb(241, 109, 68);
+    --fontFam: Georgia, 'Times New Roman', Times, serif;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    background-color: pink;
+}
+
 body{
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--fontFam);
+}
+
+h1{
+    font-size: 150%;
+}
+
+p{
+
 }
 
 .container{
     text-align: center;
+    justify-content: center;
     margin: auto;
     padding: 25px 100px;
 }
 
 button{
-    background-color:salmon;
+    background-color: var(--btnColor);
     color: cornsilk;
     cursor: pointer;
     padding: 2px 5px;
