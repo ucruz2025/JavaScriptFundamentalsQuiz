@@ -11,23 +11,28 @@
 <body>
     <header>
         <div><a href="./highscores.html">View Highscores</a></div>
-        <p>Time: <span id="count"></span></p>
+        <p>Time: <span id="time"></span></p>
     </header>
 
     <div class="container">
-        <h1>Coding Quiz Challenge</h1>
-        <p>Try your best to answer the following questions. The program will
-        prompt you some questions about JavaScript, and in the end it will display
-        your score. This quiz is timed, and if you respond wrong then a 10 second penalty
-        will be given to you. Wish you the best of luck!
-        </p>
-        <button id="start-Quiz">Start Quiz</button>
-        <div></div>
-        <!--What type of form should we use?-->
+        <div id="intro" class="on">
+            <h1>Coding Quiz Challenge</h1>
+            <p>Try your best to answer the following questions. The program will
+            prompt you some questions about JavaScript, and in the end it will display
+            your score. This quiz is timed, and if you respond wrong then a 10 second penalty
+            will be given to you. Wish you the best of luck!
+            </p>
+            <button id="startQuiz">Start Quiz</button>
+        </div>
+        <!--Quiz-->
+        <div id="questions" class="off">
+            <p>Hi</p>
+        </div>
 
         <!---->
     </div>
     
-    <script src="./Assests/script.js"></script>
+    <script src="./Assests/JavaScripts/script.js"></script>
+    <script src="./Assests/JavaScripts/questions.js"></script>
 </body>
 </html>

@@ -28,8 +28,6 @@ h1{
     font-size: 150%;
 }
 
-
-
 .container{
     text-align: center;
     justify-content: center;
@@ -43,4 +41,12 @@ button{
     cursor: pointer;
     padding: 2px 5px;
 
+}
+
+.off{
+    display: none;
+}
+
+.on{
+    text-align: center;
 }
