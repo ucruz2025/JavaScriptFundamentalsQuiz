@@ -2,10 +2,12 @@
 var currentQuestion = 0;
 var time = questions.length * 10;
 var timerId;
-console.log(time);
-var timeLeft = document.querySelector('#time')
-var startButton = document.querySelector('#startQuiz')//Need to add button to HTML
-var questionsSec = document.querySelector('#questions')
+
+var timeLeft = document.querySelector('#time');
+var startButton = document.querySelector('#startQuiz');//Need to add button to HTML
+var questionsSec = document.querySelector('#questions');
+var choicesSec = document.querySelector('#choices');
+var feedbackSec =  document.querySelector('#feedback');
 
 
 //Starts quiz once button clicked
@@ -23,12 +25,8 @@ startButton.addEventListener("click", function(){
     console.log(time);
 
     quizTimer();
+    displayQuestion();
 });
-
-//eventListener to view high scores
-//viewHiSc.addEventListener("click", function(){
-//
-//});
 
 //Look how to use timeInterval to set time countdown
 function quizTimer(){
@@ -36,19 +34,73 @@ function quizTimer(){
     timeLeft.textContent = time; 
 
     if(time <= 0){
-        //function that ends the quiz?
+        endQuiz();
     }
 };
 
-//function that presents the series of questions?
-
-//Preventing Default
-
 //Boolean function that determines if button pressed is correct or incorrect
-function checkAnswer(){
+function displayQuestion(){
+    var questionDis = questions[currentQuestion];
+    var choicesDis = questionDis.options;
 
+    var titleEL = document.getElementById('questionsTitle');
+    titleEL.textContent = questionDis.title;
+
+    choicesSec.setAttribute('class', 'choices');
+
+    var firstOpt = document.getElementById('a');
+    firstOpt.textContent = choicesDis[0];
+    firstOpt.onclick = checkAnswer;
+
+    var secondOpt = document.getElementById('b');
+    secondOpt.textContent = choicesDis[1];
+    secondOpt.onclick = checkAnswer;
+
+    var thirdOpt = document.getElementById('c');
+    thirdOpt.textContent = choicesDis[2];
+    thirdOpt.onclick = checkAnswer;
+    
+    var fourthOpt = document.getElementById('d');
+    fourthOpt.textContent = choicesDis[3];
+    fourthOpt.onclick = checkAnswer;
 }
 
-//If all questions are answered before, then timer reaches 0 and game is over
+function checkAnswer(){
+    if(this.value == questions[currentQuestion].answer){
+        
+        feedbackSec.textContent = 'Correct!';
+    } else {
+        time -= 5;
+
+        timeLeft.textContent = time;
+        feedbackSec.textContent = 'Ooo, Try again';
+    }
+
+    feedbackSec.setAttribute('class', 'feedback on');
+    setTimeout(function(){
+        feedbackSec.setAttribute('class', 'feedback off')
+    }, 1000);
+
+    currentQuestion++;
+
+    if(currentQuestion === questions.length){
+        endQuiz();
+    } else{
+        displayQuestion();
+    }
+}
+
+function endQuiz(){
+    clearInterval(timerId);
+
+    var endQuiz = document.getElementById('end');
+    endQuiz.setAttribute('class', 'on');
+
+    questionsSec.setAttribute('class', 'off');
+}
+
+function saveHighscores(){
+
+}
 
 //Save initals to the local storage?

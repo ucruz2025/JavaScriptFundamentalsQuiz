@@ -11,7 +11,7 @@
 <body>
     <header>
         <div><a href="./highscores.html">View Highscores</a></div>
-        <p>Time: <span id="time"></span></p>
+        <p>Time: <span id="time">0</span></p>
     </header>
 
     <div class="container">
@@ -24,15 +24,30 @@
             </p>
             <button id="startQuiz">Start Quiz</button>
         </div>
+
         <!--Quiz-->
         <div id="questions" class="off">
-            <p>Hi</p>
+            <h3 id="questionsTitle"></h3>
+            <div id="choices" class="choices"><!--Include choices CSS-->
+                <button id="a"></button>
+                <button id="b"></button>
+                <button id="c"></button>
+                <button id="d"></button>
+            </div>
+            <div id="feedback" class="feedback off"></div><!--Incluse feedback CSS-->
         </div>
 
-        <!---->
+        <div id="end" class="off">
+            <h3>You finished!</h3>
+            <p>Your final score is <span id="finalScore">.</span></p>
+            <p>
+                Enter your initials: <input type="text" id="userInitials" max="3">
+            </p>
+            <button id="submit">Submit</button>
+        </div>
     </div>
-    
-    <script src="./Assests/JavaScripts/script.js"></script>
+
     <script src="./Assests/JavaScripts/questions.js"></script>
+    <script src="./Assests/JavaScripts/script.js"></script>
 </body>
 </html>
