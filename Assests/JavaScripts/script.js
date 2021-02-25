@@ -20,17 +20,16 @@ startButton.addEventListener("click", function(){
 
     questionsSec.setAttribute('class', 'choices-page on');
 
+    //Timer starts and is displayed
     timerId = setInterval(quizTimer, 1000);
-
     timeLeft.textContent = time;
-
-    console.log(time);
-
+    
+    //Calls functions to run when button clicked
     quizTimer();
     displayQuestion();
 });
 
-//Look how to use timeInterval to set time countdown
+//Function to start countdown of time
 function quizTimer(){
     time--;
     timeLeft.textContent = time; 
@@ -44,16 +43,19 @@ function quizTimer(){
     }
 };
 
-//Boolean function that determines if button pressed is correct or incorrect
+//Function that displays the quesiton and options of quiz
 function displayQuestion(){
     var questionDis = questions[currentQuestion];
     var choicesDis = questionDis.options;
 
+    //Question is displayed as title
     var titleEL = document.getElementById('questionsTitle');
     titleEL.textContent = questionDis.title;
 
+    //Sets the appropriate CSS class for the options of quiz
     choicesSec.setAttribute('class', 'choices');
 
+    //Each option is displayed within the button
     var firstOpt = document.getElementById('a');
     firstOpt.setAttribute('value', choicesDis[0])
     firstOpt.textContent = choicesDis[0];
@@ -75,6 +77,7 @@ function displayQuestion(){
     fourthOpt.onclick = checkAnswer;
 }
 
+//Boolean function that determins if option chosen is correct
 function checkAnswer(){
     if(this.value == questions[currentQuestion].answer){
         
@@ -85,6 +88,7 @@ function checkAnswer(){
         feedbackSec.textContent = 'Ooo, Try again';
     }
 
+    //Displays feedback for user to know if option chosen was correct
     feedbackSec.setAttribute('class', 'feedback on');
     setTimeout(function(){
         feedbackSec.setAttribute('class', 'feedback off')
@@ -99,6 +103,7 @@ function checkAnswer(){
     }
 }
 
+//Function that ends quiz and changes screens
 function endQuiz(){
     clearInterval(timerId);
 
@@ -111,6 +116,7 @@ function endQuiz(){
     questionsSec.setAttribute('class', 'off');
 }
 
+//Saves initials and score into an array within the local storage
 submitButton.addEventListener("click", function(){
     var initials = userInitials.value.trim();
 

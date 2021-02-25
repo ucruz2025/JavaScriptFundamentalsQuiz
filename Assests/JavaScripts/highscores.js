@@ -1,6 +1,7 @@
 var disHighscores = document.querySelector('#highscores');
 var clearHighscores = document.querySelector('#clear');
 
+//Function that gathers array from local storage and displays in a list
 function viewHighscores(){
     var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
 
@@ -15,9 +16,11 @@ function viewHighscores(){
     }
 }
 
+//Function that clears scores once button is clicked
 clearHighscores.addEventListener("click", function(){
     window.localStorage.removeItem('highscores');
     window.location.reload();
 });
 
+//Calls the function once the page is opened
 viewHighscores();
