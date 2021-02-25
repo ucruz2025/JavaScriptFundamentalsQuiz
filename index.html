@@ -15,11 +15,11 @@
     </header>
 
     <div class="container">
-        <div id="intro" class="on">
+        <div id="intro" class="intro-page on">
             <h1>Coding Quiz Challenge</h1>
-            <p>Try your best to answer the following questions. The program will
-            prompt you some questions about JavaScript, and in the end it will display
-            your score. This quiz is timed, and if you respond wrong then a 5 second penalty
+            <p>The program willprompt you some questions about JavaScript, and at the end of the quiz it will display
+            your score. This quiz is timed and your score is determined by how much time you had left before 
+            completing it. If you respond a question wrong, then a 5 second penalty
             will be given to you. Wish you the best of luck!
             </p>
             <button id="startQuiz">Start Quiz</button>
@@ -28,20 +28,20 @@
         <!--Quiz-->
         <div id="questions" class="off">
             <h3 id="questionsTitle"></h3>
-            <div id="choices" class="choices"><!--Include choices CSS-->
-                <button id="a"></button>
-                <button id="b"></button>
-                <button id="c"></button>
-                <button id="d"></button>
+            <div id="choices" class="choices">
+                <li><button id="a"></button></li>
+                <li><button id="b"></button></li>
+                <li><button id="c"></button></li>
+                <li><button id="d"></button></li>
             </div>
-            <div id="feedback" class="feedback off"></div><!--Incluse feedback CSS-->
+            <div id="feedback" class="feedback off"></div>
         </div>
 
         <div id="end" class="off">
             <h3>You finished!</h3>
             <p>Your final score is <span id="finalScore"></span>.</p>
             <p>
-                Enter your initials: <input type="text" id="userInitials" max="3">
+                Enter your initials to save your score: <input type="text" id="userInitials" max="3">
             </p>
             <button id="submit">Submit</button>
         </div>

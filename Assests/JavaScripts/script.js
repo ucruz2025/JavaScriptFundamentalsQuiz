@@ -18,7 +18,7 @@ startButton.addEventListener("click", function(){
     var pageIntro = document.getElementById('intro');
     pageIntro.setAttribute('class', 'off');
 
-    questionsSec.setAttribute('class', 'on');
+    questionsSec.setAttribute('class', 'choices-page on');
 
     timerId = setInterval(quizTimer, 1000);
 
@@ -103,7 +103,7 @@ function endQuiz(){
     clearInterval(timerId);
 
     var endQuiz = document.getElementById('end');
-    endQuiz.setAttribute('class', 'on');
+    endQuiz.setAttribute('class', 'end-page on');
 
     var finalScore = document.getElementById('finalScore');
     finalScore.textContent = time;

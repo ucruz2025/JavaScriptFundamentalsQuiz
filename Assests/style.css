@@ -24,23 +24,65 @@ body{
     font-family: var(--fontFam);
 }
 
-h1{
-    font-size: 150%;
-}
-
 .container{
     text-align: center;
     justify-content: center;
     margin: auto;
-    padding: 25px 100px;
+    max-width: 500px;
+}
+
+.intro-page{
+    margin-top: 30px;
+}
+
+.intro-page h1{
+    font-size: 150%;
+    padding: 2%;
+}
+
+.intro-page p{
+    padding: 2%;
+}
+
+.choices-page{
+    margin-top: 30px;
+}
+
+.choices{
+    padding: 2%;
+}
+
+.end-page{
+    margin-top: 30px;
+}
+
+.end-page p{
+    padding: 2%;
+}
+
+li{
+    list-style-type: none;
+    text-align: left;
+    padding: 1%;
+}
+
+h2{
+    margin-top: 30px;
+    padding: 2%;
+}
+
+.score-list{
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 button{
     background-color: var(--btnColor);
     color: cornsilk;
     cursor: pointer;
-    padding: 2px 5px;
-
+    padding: 1%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
 }
 
 .off{
@@ -51,10 +93,8 @@ button{
     text-align: center;
 }
 
-.choices{
-    text-align: center;
-}
-
 .feedback{
+    padding: 2%;
     text-align: center;
+    color: gray;
 }
