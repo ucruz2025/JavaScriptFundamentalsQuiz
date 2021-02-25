@@ -17,17 +17,18 @@ For this section, I will be describing how the overall program is outlined and h
     4. Once completed, the End-page is displayed where the program asks the user to input their initials. Their initals and score are saved in the local storage once they press the 'Submit' button.
 
 The second HTML file is where the highscores are displayed. Here, the user has some options:
+
     5. When the user presses the 'Submit' button from the previous step, then they're directed to the second HTML file where the highscores are displayed. This HTML file gathers the array from the local storage and displays it on this screen. 
     6. The user can choose to either delete the highscores or go back to the first HTML file and take the quiz again.
 
 ## Screenshots of Repository
-Here is a screenshot of the intro page for the quiz: (./Assests/Screenshots/Quiz-End-Page-Screenshot.png)
+![Here is a screenshot of the intro page for the quiz: ](./Assests/Screenshots/Quiz-Intro-Page-Screenshot.png)
 
-Here is a screenshot of the questions:
+![Here is a screenshot of the questions: ](./Assests/Screenshots/Quiz-Questions-Screenshot.png)
 
-Here is a screenshot of when the user ends the quiz:
+![Here is a screenshot of when the user ends the quiz: ](./Assests/Screenshots/Quiz-End-Page-Screenshot.png)
 
-Here is a screenshot of the highscores:
+![Here is a screenshot of the highscores: ](./Assests/Screenshots/Quiz-Highscores-Screenshot.png)
 
 ## Live Link to Repository
 Here is the live link to the repository: https://ucruz2025.github.io/JavaScriptFundamentalsQuiz/
